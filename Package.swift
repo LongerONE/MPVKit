@@ -69,7 +69,7 @@ let package = Package(
             name: "_FFmpeg-GPL",
             dependencies: [
                 "Libavcodec-GPL", "Libavfilter-GPL", "Libavformat-GPL", "Libavutil-GPL", "Libswresample-GPL", "Libswscale-GPL",
-                "Libssl", "Libcrypto", "Libass", "Libfreetype", "Libfribidi", "Libharfbuzz",
+                "Libssl", "Libcrypto", "Libass", "Libfontconfig", "Libfreetype", "Libfribidi", "Libharfbuzz",
                 "MoltenVK", "Libshaderc_combined", "lcms2", "Libplacebo", "Libdovi", "Libunibreak",
                 "Libsmbclient", "gmp", "nettle", "hogweed", "gnutls", "Libdav1d"
             ],
@@ -169,6 +169,12 @@ let package = Package(
         ),
 
         .binaryTarget(
+            name: "Libfontconfig",
+            url: "https://github.com/mpvkit/libass-build/releases/download/0.17.3-fontconfig/Libfontconfig.xcframework.zip",
+            checksum: "3c38c2b9f1d9a67cbfd7d994e917ea711fb6280053bb35c6a0ba28332e334f05"
+        ),
+
+        .binaryTarget(
             name: "Libfreetype",
             url: "https://github.com/mpvkit/libass-build/releases/download/0.17.3/Libfreetype.xcframework.zip",
             checksum: "300d2966c914e06f0211d8da0ea6208a345709b888e9cbbf1cdd94df26330359"
@@ -188,8 +194,8 @@ let package = Package(
 
         .binaryTarget(
             name: "Libass",
-            url: "https://github.com/mpvkit/libass-build/releases/download/0.17.3/Libass.xcframework.zip",
-            checksum: "af24cd1429069153f0ca5c650e0b374c27ae38283aca47cbbbc9edb3165b182e"
+            url: "https://github.com/mpvkit/libass-build/releases/download/0.17.3-fontconfig/Libass.xcframework.zip",
+            checksum: "f08791b5261a0a8388a6e30517dd89c2aefd8098493d5e23b5afd39c8f7cbfff"
         ),
 
         .binaryTarget(
